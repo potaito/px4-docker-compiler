@@ -11,6 +11,11 @@ docker build . -f Dockerfile -t my-px4-compiler \
 ```
 
 # Running
+Interactive shell
+
 ```shell
 docker run -it --rm -v $PWD:$PWD -w $PWD my-px4-compiler
 ```
+
+One-off build command:
+docker run -v $PWD:$PWD -w $PWD my-px4-compiler make px4_fmu-v5x_default

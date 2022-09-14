@@ -26,7 +26,7 @@ RUN git config --global user.email $GIT_NAME && \
 	git config --global user.name $GIT_EMAIL
 
 # Color prompt
-RUN echo "PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
+RUN echo "PS1='${debian_chroot:+($debian_chroot)}\[\033[38;5;196m\]\u@\[\033[38;5;196m\]\h\[$(tput sgr0)\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
 
 # Copy entrypoint
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh

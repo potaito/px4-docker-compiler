@@ -11,13 +11,14 @@ docker build . -f Dockerfile -t my-px4-compiler \
 ```
 
 # Running the Docker Container
-Interactive shell
+
+## Interactive shell
 
 ```shell
 docker run -it --rm -v $PWD:$PWD -w $PWD my-px4-compiler
 ```
 
-# One-off PX4 build command
+## Alternative: One-off PX4 build command
 This starts a docker container, runs the build command and then stops the container again:
 
 ```shell
